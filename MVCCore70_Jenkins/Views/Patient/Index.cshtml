@@ -1,0 +1,40 @@
+﻿@model MVCCore70_Jenkins.Models.PatientMetricsViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="container-fluid">
+    <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>DOB</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model.Patients)
+            {
+                <tr>
+                    <td class="col">
+                        @p.PatientID
+                    </td>
+                    <td class="col">
+                        @p.FirstName
+                    </td>
+                    <td class="col">
+                        @p.LastName
+                    </td>
+                    <td class="col">
+                        @p.DOB
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
